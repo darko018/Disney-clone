@@ -30,9 +30,9 @@ function Movies() {
         <Wrap>
           <img src="https://pyxis.nymag.com/v1/imgs/b2d/cca/7ef3d90ffe90465f8c9b16448382185286-02-simpsons-couch.rhorizontal.w700.jpg" />
         </Wrap>
-        <Wrap>
+        {/* <Wrap>
           <img src="https://pyxis.nymag.com/v1/imgs/b2d/cca/7ef3d90ffe90465f8c9b16448382185286-02-simpsons-couch.rhorizontal.w700.jpg" />
-        </Wrap>
+        </Wrap> */}
       </Content>
     </Container>
   );
