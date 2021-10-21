@@ -1,11 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import { selectMovies } from "../features/movie/movieSlice";
+import { useSelector } from "react-redux";
 
 function Movies() {
+  const movies = useSelector(selectMovies);
+
+  console.log(movies);
+
   return (
     <Container>
       <h4>Recomended for You</h4>
       <Content>
+        {movies &&
+          movies.map((movie) => (
+            <Wrap>
+              <img src={movie.cardImg} />
+            </Wrap>
+          ))}
+
         <Wrap>
           <img src="https://pyxis.nymag.com/v1/imgs/b2d/cca/7ef3d90ffe90465f8c9b16448382185286-02-simpsons-couch.rhorizontal.w700.jpg" />
         </Wrap>
@@ -27,12 +40,6 @@ function Movies() {
         <Wrap>
           <img src="https://pyxis.nymag.com/v1/imgs/b2d/cca/7ef3d90ffe90465f8c9b16448382185286-02-simpsons-couch.rhorizontal.w700.jpg" />
         </Wrap>
-        <Wrap>
-          <img src="https://pyxis.nymag.com/v1/imgs/b2d/cca/7ef3d90ffe90465f8c9b16448382185286-02-simpsons-couch.rhorizontal.w700.jpg" />
-        </Wrap>
-        {/* <Wrap>
-          <img src="https://pyxis.nymag.com/v1/imgs/b2d/cca/7ef3d90ffe90465f8c9b16448382185286-02-simpsons-couch.rhorizontal.w700.jpg" />
-        </Wrap> */}
       </Content>
     </Container>
   );
